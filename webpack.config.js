@@ -1,6 +1,8 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
+  mode: "development",
   entry: {bundle: path.resolve(__dirname,'src/index.js')},
   output: {
     filename: 'bundle.js',
@@ -26,7 +28,10 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/i,
-        use: ['style-loader', 'sass-loader', 'css-loader']
+        use: ['style-loader',
+              'css-loader',
+              'sass-loader'
+            ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
