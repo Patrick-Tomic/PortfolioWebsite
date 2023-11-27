@@ -1,4 +1,4 @@
-export default function buildProject(src, siteLink,ghLink, pInner){
+export default function buildProject(src, siteLink,ghLink, pInner, head){
     const projects = document.querySelector('.projects')
     const img = document.createElement('img')
     const projectCard = document.createElement('div')
@@ -35,6 +35,13 @@ export default function buildProject(src, siteLink,ghLink, pInner){
    links.appendChild(btns)
     p.innerHTML = pInner
    projectCard.appendChild(links)
-    projectCard.appendChild(p)
+   const desc = document.createElement('div')
+   desc.classList.add('description')
+   const h2 = document.createElement('h2')
+   h2.innerHTML = head
+    desc.appendChild(h2)
+    desc.appendChild(p)
+    projectCard.appendChild(desc)
     projects.appendChild(projectCard)
+    
 }
