@@ -12,6 +12,7 @@ body{
     height: 100%;
 }
 header{
+    box-shadow: 0px 5px 5px white;
     h2{
         margin-top: 25px;
        color: white;
@@ -58,7 +59,7 @@ header{
         }
     }
 }
-#skills{
+.skills{
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -90,7 +91,7 @@ header{
 }
 .projects{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     .projectCard{
         padding: 50px;

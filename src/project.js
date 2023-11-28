@@ -1,5 +1,14 @@
 export default function buildProject(src, siteLink,ghLink, pInner, head){
+    
+    const main = document.querySelector('main')
     const projects = document.querySelector('.projects')
+    if(main.contains(projects)==true){
+       console.log(true)
+        
+    }else{
+        const projects = document.createElement('div')
+        projects.classList.add('projects')
+    }
     const img = document.createElement('img')
     const projectCard = document.createElement('div')
     const links = document.createElement('div')
@@ -43,5 +52,5 @@ export default function buildProject(src, siteLink,ghLink, pInner, head){
     desc.appendChild(p)
     projectCard.appendChild(desc)
     projects.appendChild(projectCard)
-    
+    main.appendChild(projects)
 }

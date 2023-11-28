@@ -1,16 +1,18 @@
-import java from './java.png'
-import sass from './sass.png'
-import css from './css.png'
-import html from './html.png'
-import js from  './js.png'
-import py from './python.png'
-import sql from './sql.png'
-import wp from './webpack.png'
-import ts from './ts.png'
+import java from './pics/java.png'
+import sass from './pics/sass.png'
+import css from './pics/css.png'
+import html from './pics/html.png'
+import js from  './pics/js.png'
+import py from './pics/python.png'
+import sql from './pics/sql.png'
+import wp from './pics/webpack.png'
+import ts from './pics/ts.png'
 export default function buildSkills(){
+    const wrap = document.createElement('div')
+    const main = document.querySelector('main')
+    wrap.classList.add('skills')
     const skills = document.createElement('div')
     skills.classList.add('wrap')
-    const wrap = document.getElementById('skills')
     const h2 = document.createElement('h2')
     h2.innerHTML = "My Skillset"
     wrap.appendChild(h2)
@@ -63,7 +65,7 @@ export default function buildSkills(){
                 break
             case 4:
                 img.title = 'JavaScript'
-                img.style.marginLeft = '25px'
+                img.style.marginLeft = '20px'
                 img.src = js
                 img.alt = 'JavaScript'
                 p.innerHTML = img.title
@@ -105,6 +107,7 @@ export default function buildSkills(){
             case 8:
                 img.title = 'TypeScript'
                 img.src = ts
+                img.style.marginLeft = '20px'
                 img.alt = 'Typescript'
                 p.innerHTML = img.title
                 card.appendChild(img)
@@ -114,5 +117,6 @@ export default function buildSkills(){
                 break
         }
         wrap.appendChild(skills)
+        main.appendChild(wrap)
     }
 }
