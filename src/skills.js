@@ -63,6 +63,7 @@ export default function buildSkills(){
                 break
             case 4:
                 img.title = 'JavaScript'
+                img.style.marginLeft = '25px'
                 img.src = js
                 img.alt = 'JavaScript'
                 p.innerHTML = img.title
