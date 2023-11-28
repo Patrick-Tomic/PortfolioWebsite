@@ -86,8 +86,8 @@ header{
 }
 .projects{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-rows: 1fr;
     .projectCard{
         padding: 50px;
         display: flex;
@@ -173,4 +173,52 @@ header{
      to{
         transform: scaleX(1);
      }
+}
+
+@media (max-width: 400px){
+    .header{
+        padding: 5px;
+        .portrait{
+            height: 160px;
+            
+        }
+        h2{
+            font-size: 20px;
+        }
+        p{
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+    #skills{
+        img{
+            width: 1vw;
+            height: 2vh;
+        }
+    }
+    .projects{
+        .projectCard{
+            padding: 25px;
+        }
+        .links{
+            width: 5vw;
+        }
+        .btns{
+            button{
+                font-size: 8px;
+                width: 4vw;
+                height: 2vh;
+            }
+            .description{
+                p{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    .side{
+        .sideBar{
+            width: 100%;
+        }
+    }
 }
