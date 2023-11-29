@@ -1,12 +1,13 @@
 export default function buildProject(src, siteLink,ghLink, pInner, head){
     
     const main = document.querySelector('main')
-    const projects = document.querySelector('.projects')
+    let projects = document.querySelector('.projects')
     if(main.contains(projects)==true){
-       console.log(true)
+    
         
     }else{
-        const projects = document.createElement('div')
+        console.log(false)
+        projects = document.createElement('div')
         projects.classList.add('projects')
     }
     const img = document.createElement('img')
