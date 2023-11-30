@@ -21,6 +21,7 @@ export default function buildSkills(){
         const img = document.createElement('img')
         const p = document.createElement('p')
         const card = document.createElement('div')
+  
         card.classList.add('card')
         switch(count){
             case 0:
@@ -28,6 +29,7 @@ export default function buildSkills(){
                 img.src = java
                 img.alt = 'Java'
                 p.innerHTML = img.title
+                p.style.marginLeft = '10px'
                 card.appendChild(img)
                 card.appendChild(p)
                 skills.appendChild(card)
@@ -46,6 +48,7 @@ export default function buildSkills(){
             case 2:
                 img.title = 'HTML'
                 img.src = html
+                p.style.marginLeft = '11px'
                 img.alt = 'HTML'
                 p.innerHTML = img.title
                 card.appendChild(img)
@@ -57,6 +60,7 @@ export default function buildSkills(){
                 img.title = 'CSS'
                 img.src = css
                 img.alt = 'CSS'
+                p.style.marginLeft = '12px'
                 p.innerHTML = img.title
                 card.appendChild(img)
                 card.appendChild(p)
@@ -78,6 +82,7 @@ export default function buildSkills(){
                 img.title = 'mySQL'
                 img.src = sql
                 img.alt = 'mySQL'
+                p.style.marginLeft = '8px'
                 p.innerHTML = img.title
                 card.appendChild(img)
                 card.appendChild(p)
@@ -88,6 +93,7 @@ export default function buildSkills(){
                 img.title = 'Sass'
                 img.src = sass
                 img.alt = 'Sass'
+                p.style.marginLeft = '5px'
                 p.innerHTML = img.title
                 card.appendChild(img)
                 card.appendChild(p)
