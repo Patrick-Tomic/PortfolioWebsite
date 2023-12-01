@@ -13,10 +13,12 @@ export default function buildBooks(book,description, link){
     const id = document.getElementById(book)
     id.style.display = 'block'
    })
+   
    li.addEventListener('mouseleave',()=>{
     const id = document.getElementById(book)
     id.style.display = 'none'
    }) 
+   
    li.addEventListener('click',()=>{
     window.location.href = link
    })

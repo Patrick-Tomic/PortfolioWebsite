@@ -14,11 +14,7 @@ body{
 }
 header{
     box-shadow: 0px 5px 5px white;
-    h2{
-        margin-top: 25px;
-       color: white;
-       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
+   
     position: sticky;
     top: 0;
     background-color: #13274F;
@@ -34,6 +30,15 @@ header{
         border: none;
         margin-top: 5px;
         cursor: pointer;
+    }
+    .name{ 
+        font-size: 1em;
+            margin-left: 15vw;
+           color: white;
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    .name:hover{
+        color: #FFD700;
     }
 }
 .header{
@@ -214,7 +219,12 @@ main{
 .bio{
     z-index: 1;
     display: flex;
-   
+   button{
+    cursor: pointer;
+   }
+   button:hover{
+    color: white;
+   }
     
     .myStory{
         button{
@@ -253,11 +263,12 @@ main{
         border-bottom: none;
         border-left: none;
         button{
+            border: none;
             font-size: 1.5em;
             font-weight: bold;
             text-align: left;
              margin-bottom: 2vh;
-            border: none;
+           width: 10vw;
             background-color: #F4BB44;
         }
         .bookDiv{
@@ -265,7 +276,7 @@ main{
             display: none;
             .bookDescription{
                 left: 25%;
-                background-color: white;
+                 
                 border: solid 1px #13274F;
                 display: none;
                 position: absolute;
@@ -292,7 +303,10 @@ main{
         
     }
    .hobbies{
+    border-top: #13274F 5px solid;
+    
     button{
+       
         font-size: 1.5em;
         font-weight: bold;
         text-align: left;
@@ -300,21 +314,21 @@ main{
         border: none;
         background-color: #F4BB44;
     }
+     
     height: auto;
     padding:2vh 3vw;
     width: 33%;
-    border: #13274F solid 5px;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
+     
     .hobbyDiv{
          display: none;
     .list{
+        li{
         p{
             border: none;
            
            width: 15vw;
         }
+    }
     }
 }
    }
@@ -372,33 +386,34 @@ main{
 @media (max-width: 500px){
    
     header{
-        width: 350px;
+        width: 100%;
     }
     .header{
-        width: 350px;
+        width: 100%;
          
         padding: 5px;
         display: flex;
         flex-wrap: wrap;
-         
+         justify-content: center;
+         align-items: center;
         .portrait{
             margin-top: 5vh;
             height: 160px;
             
         }
         h2{
-            margin-left: 25px;
+            
             font-size: 24px;
         }
         p{
-            margin-left: 25px;
+          
             font-size: 10px;
             line-height: 12px;
         }
     }
     .skills{
       
-       width: 350px;
+       width: 100%;
         
     .wrap{
         display: flex;
@@ -425,9 +440,10 @@ main{
         .projectCard{
             flex-direction: column;
             .links{
-                margin-left: 10vw;
+                
                 img{
                    width: 250px;
+                   margin-left: 15vw;
                    height: auto;
                 }
                 .btns{
@@ -442,7 +458,7 @@ main{
             }
             .description{
                 h2{
-                    margin-left: 15vw;
+                    margin-left: 20vw;
                     color:  #FFBF00;
                 }
             }
@@ -472,4 +488,81 @@ main{
             animation: none;
         }
     }
+
+
+//ABOUT ME CSS
+main{
+#animate{
+    animation: none;
+    display: block;
+}
+#reverse{
+    animation: none;
+    display: block;
+}
+.bio{
+
+    flex-direction: column;
+    .bookList{
+        width: 100%;
+        border-bottom: #13274F 5px solid;
+        border-top:#13274F 5px solid;
+        .bookDiv{
+            width: 100%;
+           
+            display: block;
+            li{
+                pointer-events: none;
+                width: 100%;
+            .bookDescription{
+                width: 80%;
+                background-color:#F4BB44;
+                border: none;
+                position: relative;
+                display: block;
+              
+            }
+        }
+           
+        }
+    }
+        .hobbies{
+            width: 100%;
+            border-top: #13274F 5px solid;
+            border-bottom:#13274F 5px solid;
+            
+            .hobbyDiv{
+                display: block;
+                 
+                .list{
+                    li{
+                        font-weight: bold;
+                        margin-bottom: 5vh;
+                        width: 100%;
+                    p{
+                        width: 80%;
+                    }
+                }
+            }
+
+            }
+        }
+        .myStory{
+            padding: 50px;
+            button{
+                border: none;
+            }
+            width: 100%;
+            border: none;
+            .sumDiv{
+                display: block;
+            }
+        }
+      
+    
+}
+
+}
+
+
 }
