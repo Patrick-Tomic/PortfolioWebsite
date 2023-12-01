@@ -1,3 +1,4 @@
+
 import ash from './slider/ash.jpg'
 import baby from './slider/baby.jpg'
 import brother from './slider/brother.jpg'
@@ -42,7 +43,7 @@ export default function buildImageSlider(){
         const img = document.createElement('img')
         img.src = names[i]
         if(i%2==0){
-            img.style.marginTop = '0'
+            img.style.marginTop = '3vh'
             img.style.zIndex = 'auto'
         }else if(i%2!=0){
             img.style.marginTop = '8vh'
@@ -51,6 +52,19 @@ export default function buildImageSlider(){
         img.alt = 'myFamily/nature'
         slider.appendChild(img)
     }
+    let count = 0
+    var interval = setInterval(()=>{
+        let vw = 100
+        if(count ==-11){
+            count = 0
+            vw = vw*count
+            slider.style.transform = `translateX(${vw}vw)`
+        }else{
+            count--
+            vw = vw*count
+            slider.style.transform = `translateX(${vw}vw)`
+            }
+    },3000)
     main.appendChild(slider)
 }
  

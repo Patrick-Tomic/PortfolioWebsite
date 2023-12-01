@@ -209,6 +209,7 @@ header{
 }
 
 main{
+   
 #animate{
     animation: slideDown .5s;
     transform-origin: top;
@@ -221,6 +222,8 @@ main{
 }
     
 .bio{
+    z-index: 5;
+    height: 900px;
     z-index: 1;
     display: flex;
    button{
@@ -284,8 +287,9 @@ main{
                 border: solid 1px #13274F;
                 display: none;
                 position: absolute;
-                width: 15vw;
+                width: 18vw;
                 height: auto;
+                
                 padding: 2vw 2vh;     
                 background-color: #343434;
                 border-radius: 10px;
@@ -327,6 +331,7 @@ main{
          display: none;
     .list{
         li{
+            font-size: 18px;
         p{
             border: none;
            
@@ -341,13 +346,35 @@ main{
   margin-left: 30vw;
   margin-top: 2vh;
 }
+.familyAlbum{
+    border-top-left-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: #13274F;
+    color:white;
+    text-align: center;
+}
 .imgSlider{
+    width: 1800vw;
+    
+    background-color: #13274F; /* Chrome 10-25, Safari 5.1-6 */
     display: flex;
+    transition: transform 1s ease-in;
+    transform: translateX(0);
     img{
         margin-left: 5vw;
+        margin-bottom: 5vh;
         height: 25vh;
         width: auto;
         border-radius: 50px;
+    }
+}
+.explain{
+   margin: 5vh 5vw;
+    h2{
+        text-align: center;
+    }
+    p{
+        line-height: 25px;
     }
 }
 }
@@ -419,7 +446,7 @@ main{
         
         .btns{
             button{
-                width: 15vw;
+                width: 10vw;
             }
         }
     }
@@ -428,12 +455,52 @@ main{
         margin-right: 5vw;
     }
 }
-} 
-.imgSlider{
+}
+main{ 
+     
+.bio{
+    .myStory{
+        .sumDiv{
+            P{
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+    .bookList{
+        .bookDiv{
+            .bookDescription{
+                width: 45vw;
+            }
+            li{
+                font-size: 15px;
+            }
+        }
+      
+    }
+    .hobbies{
 
+   .hobbyDiv{
+    .list{
+        font-weight: bold;
+        li{
+            font-size: 15px;
+        }
+        p{
+            font-size: 13px;
+        }
+    }
+   }
+}
+}
+.imgSlider{
+    img{
+        height: 15vh;
+    }
+}
 }
  }
-@media (max-width: 500px){
+@media (max-width: 700px){
    
     header{
         width: 100%;
@@ -542,6 +609,24 @@ main{
 
 //ABOUT ME CSS
 main{
+    @keyframes slideUp{
+        from{
+            transform: scaleY(1);
+            display: block;
+        }
+    
+        to{
+            transform: scaleY(0);
+            
+        }
+    }
+    display: flex;
+    flex-direction: column;
+    
+    
+    .quote{
+       margin-left: 10vw;
+    }
 #animate{
     animation: none;
     display: block;
@@ -551,7 +636,7 @@ main{
     display: block;
 }
 .bio{
-
+    min-height: 251vh;
     flex-direction: column;
     .bookList{
         width: 100%;
@@ -568,6 +653,7 @@ main{
                 width: 80%;
                 background-color:#F4BB44;
                 border: none;
+                font-size: 10px;
                 position: relative;
                 display: block;
               
@@ -577,6 +663,7 @@ main{
         }
     }
         .hobbies{
+           margin-bottom: 50vh;
             width: 100%;
             border-top: #13274F 5px solid;
             border-bottom:#13274F 5px solid;
@@ -612,7 +699,9 @@ main{
     
 }
 .imgSlider{
-
+    img{
+        height: 25vh;
+    }
 }
 }
 

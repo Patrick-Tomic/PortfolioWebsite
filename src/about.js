@@ -96,6 +96,18 @@ export default function buildAboutMe(){
         buildHobbies('Guitar',`I have been practicing guitar a decent amount lately, current learning <a href = 'https://www.youtube.com/watch?v=tH2w6Oxx0kQ'>Dust in the Wind</a> and just started to learn a <a href = 'https://www.youtube.com/watch?v=Z2b15rwGBJc'>lullaby</a>`)
         buildHobbies('Piano',`I have been playing piano since senior year of college and its relaxing to play. I am really into all music but for piano I usually just play classical. The only song I know fully is <a href='https://www.youtube.com/watch?v=2WfaotSK3mI'>Gymnopedie no. 1</a>`)
         buildHobbies('Reading','I have become a big reader this year as my book list would show lol. I appreciate learning alot and you can get so much out of reading')
-      
+      const familyAlbum = document.createElement('h1')
+      familyAlbum.innerHTML = 'Family Album'
+      familyAlbum.classList.add('familyAlbum')
+      main.appendChild(familyAlbum)
          buildImageSlider()
+         const div = document.createElement('div')
+         const explainHead = document.createElement('h2')
+         explainHead.innerHTML = 'The people in my Family'
+         const explain = document.createElement('p')
+         explain.innerHTML = 'So my family is forever growing. I love making new connections and keeping tighter bonds, I have always had a small immediate family, but the people I truly love will always stay with me and I will always have their back. Some of the people in here are family by blood like my sister Anita and my mom Spomenka. But the closest person in my life is my brother dean, and we have been everywhere and done everything together. He is really my rock. People like my little brother Daniel or my philosophy teacher Timothy are two people who I love dearly and I know they will go far. My brother Thien is someone who always has my back and I know he will always be by my side. There is so many members of my family and I hope it keeps growing. More pictures to come!'
+        div.appendChild(explainHead)
+        div.appendChild(explain)
+        div.classList.add('explain')
+        main.appendChild(div)
     }
