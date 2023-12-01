@@ -1,5 +1,6 @@
 import buildBooks from "./books"
 import buildHobbies from "./hobbies"
+import buildImageSlider from "./img"
 export default function buildAboutMe(){
     const main = document.querySelector('main')
     const bio = document.createElement('div')
@@ -96,5 +97,5 @@ export default function buildAboutMe(){
         buildHobbies('Piano',`I have been playing piano since senior year of college and its relaxing to play. I am really into all music but for piano I usually just play classical. The only song I know fully is <a href='https://www.youtube.com/watch?v=2WfaotSK3mI'>Gymnopedie no. 1</a>`)
         buildHobbies('Reading','I have become a big reader this year as my book list would show lol. I appreciate learning alot and you can get so much out of reading')
       
-         
+         buildImageSlider()
     }

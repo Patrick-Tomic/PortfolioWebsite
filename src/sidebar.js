@@ -13,7 +13,7 @@ export default function buildSideBar(){
        sideBar.setAttribute('id','active')
     })
     removeBtn.addEventListener('click',()=>{
-        sideBar.removeAttribute('id','active')
+        sideBar.id = 'deActive'
     })
     sideBar.appendChild(removeBtn)
    const homeDiv = document.createElement('div')
@@ -29,6 +29,7 @@ p.innerHTML = '<svg width="40" height="40" viewBox="0 0 183 150" fill="none" xml
         main.innerHTML = ''
         body.style.backgroundColor = '#343434'
         buildMain()
+        sideBar.removeAttribute('id','active')
     })
     homeDiv.appendChild(home)
     homeDiv.appendChild(p)
@@ -41,6 +42,7 @@ p.innerHTML = '<svg width="40" height="40" viewBox="0 0 183 150" fill="none" xml
         main.innerHTML = ''
         body.style.backgroundColor = '#F4BB44'
         buildAboutMe()
+        sideBar.removeAttribute('id','active')
      })
      aboutBtn.innerHTML = 'About Me'
      aboutBtn.classList.add('btn')
