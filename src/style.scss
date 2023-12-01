@@ -200,60 +200,115 @@ header{
 }
 
 main{
-   
+#animate{
+    animation: slideDown .5s;
+    transform-origin: top;
+    display: block;
+}
+#reverse{
+    transform-origin: top;
+    animation: slideUp .5s;
+    
+}
+    
 .bio{
     z-index: 1;
     display: flex;
+   
     
     .myStory{
-       border: 5px solid #13274F;
+        button{
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: left;
+             margin-bottom: 2vh;
+            border: none;
+            background-color: #F4BB44;
+        }
+        height: auto;
+        border-bottom: none;
+        border: solid 5px #13274F;
+        border-bottom: none;
+       
+        
        padding:2vh 3vw;
        
         font-size: 18px;
         color: black;
         width: 33%;
+        .sumDiv{
+            display: none;
+        }
+
     }
     .bookList{
-        
+         
+        height: auto;
         display: flex;
         flex-direction: column;
         width: 33%;
         padding: 25px;
         border: 5px solid #13274F;
         border-right: none;
+        border-bottom: none;
         border-left: none;
-        .bookDescription{
-            left: 25%;
-            background-color: white;
-            border: solid 1px #13274F;
-            display: none;
-            position: absolute;
-            width: 15vw;
-            height: auto;
-            padding: 2vw 2vh;     
-            background-color: #343434;
-            border-radius: 10px;
-        }
-        li{
-         
-            margin-bottom: 2vh;
-            font-size: 18px;
+        button{
+            font-size: 1.5em;
             font-weight: bold;
-            width: 15vw;
+            text-align: left;
+             margin-bottom: 2vh;
+            border: none;
+            background-color: #F4BB44;
         }
-        ol{
-        li:hover{
-            color: white;
-            cursor: pointer;
+        .bookDiv{
+            
+            display: none;
+            .bookDescription{
+                left: 25%;
+                background-color: white;
+                border: solid 1px #13274F;
+                display: none;
+                position: absolute;
+                width: 15vw;
+                height: auto;
+                padding: 2vw 2vh;     
+                background-color: #343434;
+                border-radius: 10px;
+            }
+            li{
+             
+                margin-bottom: 2vh;
+                font-size: 18px;
+                font-weight: bold;
+                width: 15vw;
+            }
+            ol{
+            li:hover{
+                color: white;
+                cursor: pointer;
+            }
+            }
         }
-        }
+        
     }
    .hobbies{
+    button{
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: left;
+         margin-bottom: 2vh;
+        border: none;
+        background-color: #F4BB44;
+    }
+    height: auto;
     padding:2vh 3vw;
     width: 33%;
     border: #13274F solid 5px;
     border-left: none;
     border-right: none;
+    border-bottom: none;
+    .hobbyDiv{
+         display: none;
     .list{
         p{
             border: none;
@@ -261,6 +316,7 @@ main{
            width: 15vw;
         }
     }
+}
    }
 }
 .quote{
@@ -279,6 +335,28 @@ main{
      to{
         transform: scaleX(1);
      }
+}
+@keyframes slideDown{
+    from{
+        transform: scaleY(0);
+      
+    }
+
+    to{
+        transform: scaleX(1);
+        
+    }
+}
+@keyframes slideUp{
+    from{
+        transform: scaleY(1);
+        display: block;
+    }
+
+    to{
+        transform: scaleY(0);
+        display: none;
+    }
 }
 /* @media (max-width: 1000px){
     .skills{

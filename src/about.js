@@ -9,17 +9,41 @@ export default function buildAboutMe(){
     bio.classList.add('bio')
     const myStory = document.createElement('div')
     myStory.classList.add('myStory')
-    const myHeading = document.createElement('h2')
+    const myHeading = document.createElement('button')
+            myHeading.addEventListener('click',()=>{
+                if(summContainer.id == 'animate'){
+                   summContainer.id = 'reverse'
+                    
+                    return
+                }
+                 
+                summContainer.id = 'animate'
+            })
     myHeading.innerHTML = 'My Story'
+        const bookContainer = document.createElement('div')
+        const summContainer = document.createElement('div')
+        summContainer.classList.add('sumDiv')
+        const hobbyContainer = document.createElement('div')
+        hobbyContainer.classList.add('hobbyDiv')
     const summary = document.createElement('p')
     summary.innerHTML = 'My family is originally from Bosnia and the only family that lives in the states is my mother and sister. When I was in highschool I was unsure what I wanted to do with my life until senior year when I got into APCS and learned Java. I quickly learned it was what I wanted to do for majority of my life. I always loved building since I was a kid, and coding keeps my inner child alive. I try to keep myself as busy as possible day in and day out, and try to think of programming as my number one priority. Hoping to eventually start my own company that could branch out into variety of work. I am building great connections with people and trying to help as many as I can. I have a beautiful girlfriend that I love with my whole heart and we share a townhome with two dogs named Delilah and Nemo and my brother Dean.'
     const bookList = document.createElement('div')
     bookList.classList.add('bookList')
-    const bookTitle = document.createElement('h1')
+    const bookTitle = document.createElement('button')
     bookTitle.innerHTML = 'My Books'
+                bookTitle.addEventListener('click',()=>{
+                    if(bookContainer.id == 'animate'){
+                        bookContainer.id = 'reverse'
+                        
+                        return
+                    }
+                  
+                    bookContainer.id = 'animate'
+                })
     bookList.appendChild(bookTitle)
     const ol = document.createElement('ol')
-    bookList.appendChild(ol)
+    bookContainer.appendChild(ol)
+    bookContainer.classList.add('bookDiv')
                 const currentRead = document.createElement('h2')
                 currentRead.innerHTML = 'Currently Reading'
                     const currentBooks = document.createElement('ul')
@@ -29,18 +53,30 @@ export default function buildAboutMe(){
                     const atomicHabits = document.createElement('li')
                     atomicHabits.innerHTML = 'Atomic Habits'
                     currentBooks.appendChild(atomicHabits)
-    bookList.appendChild(currentRead)
-    bookList.appendChild(currentBooks)
-            const hobbyHeading = document.createElement('h1')
+                    bookContainer.appendChild(currentRead)
+                    bookContainer.appendChild(currentBooks)
+                    bookList.appendChild(bookContainer)
+            const hobbyHeading = document.createElement('button')
+            hobbyHeading.addEventListener('click',()=>{
+                if(hobbyContainer.id == 'animate'){
+                    hobbyContainer.id = 'reverse'
+                    
+                    return
+                }
+                 
+                hobbyContainer.id = 'animate'
+            })
             hobbyHeading.innerHTML = 'My Hobbies'
             const hobbyList = document.createElement('div')
             hobbyList.classList.add('hobbies')
             const list = document.createElement('ul')
             list.classList.add('list')
             hobbyList.appendChild(hobbyHeading)
-            hobbyList.appendChild(list)
+            hobbyContainer.appendChild(list)
+            hobbyList.appendChild(hobbyContainer)
     myStory.appendChild(myHeading)
-    myStory.appendChild(summary)
+    summContainer.appendChild(summary)
+    myStory.appendChild(summContainer)
     bio.appendChild(bookList)
     bio.appendChild(myStory)
     bio.appendChild(hobbyList)
@@ -59,4 +95,6 @@ export default function buildAboutMe(){
         buildHobbies('Guitar',`I have been practicing guitar a decent amount lately, current learning <a href = 'https://www.youtube.com/watch?v=tH2w6Oxx0kQ'>Dust in the Wind</a> and just started to learn a <a href = 'https://www.youtube.com/watch?v=Z2b15rwGBJc'>lullaby</a>`)
         buildHobbies('Piano',`I have been playing piano since senior year of college and its relaxing to play. I am really into all music but for piano I usually just play classical. The only song I know fully is <a href='https://www.youtube.com/watch?v=2WfaotSK3mI'>Gymnopedie no. 1</a>`)
         buildHobbies('Reading','I have become a big reader this year as my book list would show lol. I appreciate learning alot and you can get so much out of reading')
+      
+         
     }
