@@ -64,13 +64,14 @@ header{
     background-color: white;
     display: flex;
     flex-direction: column;
+     
     box-shadow: 0px 15px 15px black;
     h2{
         margin-left: 43%;
     }
 
     .wrap{
-        
+        margin-left: 3vw;
         background-color: white;
         margin-bottom: 10px;
         display: grid;
@@ -199,10 +200,11 @@ header{
 }
 
 main{
-    
+   
 .bio{
+    z-index: 1;
     display: flex;
-    justify-content: center;
+    
     p{
        border: 5px solid #13274F;
        
@@ -210,6 +212,27 @@ main{
         font-size: 18px;
         color: black;
         width: 20vw;
+    }
+    .bookList{
+        width: 20vw;
+        padding: 2vh 5vw;
+        border: 5px solid #13274F;
+        border-right: none;
+        .bookDescription{
+            left: 25%;
+            background-color: white;
+            border: solid 1px #13274F;
+            display: none;
+            position: absolute;
+            width: 15vw;
+            height: auto;
+            padding: 2vw 2vh;    
+        }
+        li{
+            margin-bottom: 1vh;
+            font-size: 18px;
+            font-weight: bold;
+        }
     }
 }
 .quote{
@@ -229,7 +252,7 @@ main{
         transform: scaleX(1);
      }
 }
-@media (max-width: 1000px){
+/* @media (max-width: 1000px){
     .skills{
         .card{
         img{
@@ -238,9 +261,9 @@ main{
         }
     }
 }
-}
+} */
 
-@media (max-width: 350px){
+@media (max-width: 500px){
    
     header{
         width: 350px;
@@ -302,10 +325,11 @@ main{
                    height: auto;
                 }
                 .btns{
+                    
                 button{
                     width: 40vw;
                     height: 40px;
-                  
+                    
                     font-weight: normal;
                 }
                 }
