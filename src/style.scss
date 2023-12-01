@@ -13,6 +13,7 @@ body{
      
 }
 header{
+    
     box-shadow: 0px 5px 5px white;
    
     position: sticky;
@@ -156,7 +157,7 @@ header{
 .side{
     display: flex;
     justify-content: flex-end;
-   
+    
   
    
 .sideBar{
@@ -353,9 +354,11 @@ main{
     color:white;
     text-align: center;
 }
+.sliderWrap{
+   overflow: hidden;
 .imgSlider{
-    width: 1800vw;
-    
+    width: 100000vw;
+     
     background-color: #13274F; /* Chrome 10-25, Safari 5.1-6 */
     display: flex;
     transition: transform 1s ease-in;
@@ -367,6 +370,7 @@ main{
         width: auto;
         border-radius: 50px;
     }
+}
 }
 .explain{
    margin: 5vh 5vw;
@@ -599,7 +603,7 @@ main{
     }
     .side{
         .sideBar{
-            width: 350px;
+            width: 80%;
         }
         #active{
             animation: none;
@@ -608,6 +612,9 @@ main{
 
 
 //ABOUT ME CSS
+header{
+    width: 100%;
+}
 main{
     @keyframes slideUp{
         from{
@@ -638,11 +645,13 @@ main{
 .bio{
     min-height: 251vh;
     flex-direction: column;
+    pointer-events: none;
     .bookList{
         width: 100%;
         border-bottom: #13274F 5px solid;
         border-top:#13274F 5px solid;
         .bookDiv{
+          
             width: 100%;
            
             display: block;
@@ -701,9 +710,56 @@ main{
 .imgSlider{
     img{
         height: 25vh;
+         
     }
 }
 }
 
 
 }
+@media (max-width:425px){
+     
+    header{
+     z-index: 1;
+        margin: 0;
+        width: 100%;
+        .bosnianWar{
+            display: none;
+        }
+        h2{
+            font-size: 15px;
+        }
+    }
+    main{
+       
+        .bio{
+            .bookList{
+                .bookDiv{
+                    .bookDescription{
+                        z-index: auto;
+                    }
+                }
+            }
+            z-index: auto;
+             padding: 0;
+            margin: 0;
+            margin-bottom: 50vh;
+           
+        }
+        .sliderWrap{
+    .imgSlider{
+        z-index: auto;
+        img{
+            height: 20vh;
+        }
+    }
+}
+}
+.side{
+    z-index: 10;
+.sideBar{
+   z-index: 2;
+}
+}
+    }
+

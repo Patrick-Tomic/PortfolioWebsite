@@ -65,6 +65,9 @@ export default function buildImageSlider(){
             slider.style.transform = `translateX(${vw}vw)`
             }
     },3000)
-    main.appendChild(slider)
+    const wrap = document.createElement('div')
+    wrap.classList.add('sliderWrap')
+    wrap.appendChild(slider)
+    main.appendChild(wrap)
 }
  
