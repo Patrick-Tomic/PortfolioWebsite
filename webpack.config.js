@@ -1,9 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
+ 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: "development",
-  entry: {bundle: path.resolve(__dirname,'src/index.js')},
+  
+  entry:{bundle: path.resolve(__dirname,'src/index.js')},
+
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -17,6 +20,10 @@ module.exports = {
       title: `Patrick's Portfolio`,
       filename: 'index.html',
 			template: 'src/template.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: '/src/processForm.php',
+      filename: 'processForm.php'
     })
   ],
   output: {

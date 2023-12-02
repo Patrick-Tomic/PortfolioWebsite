@@ -10,8 +10,8 @@ buildProject(weather,'https://patrick-tomic.github.io/WeatherAPI/','https://gith
  const formDiv = document.createElement('div')
  formDiv.classList.add('formDiv')
 const form = document.createElement('form')
-form.method = 'post'
-form.action = 'processForm.php'
+form.action = "processForm.php"
+form.method = "post"
 for(let i=0; i<4;i++){
     const input = document.createElement('input')
     const label = document.createElement('label')
