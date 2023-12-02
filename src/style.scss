@@ -12,6 +12,16 @@ body{
     height: 100%;
      
 }
+footer
+{
+    box-shadow: 10px 10px 10px 15px white;
+    button{
+        cursor: pointer;
+        border: none;
+        background-color: $base;
+    }
+    background-color: $base;
+}
 header{
     
     box-shadow: 0px 5px 5px white;
@@ -154,6 +164,67 @@ header{
     }
     }
 }
+ 
+    .formDiv{
+        box-shadow: 10px 10px 10px 15px white;
+        background-color: #13274F;
+        
+       display: flex;
+       .contact{
+        margin-left: 10vw;
+        color: white;
+        h3{
+            font-size: 23px;
+            margin-top: 2vh;
+            margin-bottom: 5vh;
+        }
+        p{
+            font-size: 18px;
+        }
+        display: flex;
+        flex-direction: column;
+         
+        width:35vw ;
+        
+       }
+        form{
+            margin-left: 200px;
+             
+            border-radius: 10px;
+           label{
+            color: white;
+           }
+            width: 25vw;
+            padding: 10px;
+            display: flex;
+            flex-direction:column;
+            input{
+               
+                border: solid 1px black;
+                margin: 5px;
+                width: 15vw;
+            }
+            textarea{
+                width: 20vw;
+            }
+            .submit{
+                cursor: pointer;
+                border-radius: 5px;
+                margin-top: 10px;
+                width: 10vw;
+                height: 4vh;
+                background-color:#FFBF00;
+                font-size: 15px;
+                font-weight: bold;
+            }
+            .submit:hover{
+                color: white;
+                background-color: #343434;
+                 
+            }
+        }
+    }
+
 .side{
     display: flex;
     justify-content: flex-end;
@@ -190,7 +261,7 @@ header{
         color:  #FFBF00;
     }
 }
-
+ 
   
 }
 #active{
@@ -361,7 +432,7 @@ main{
      
     background-color: #13274F; /* Chrome 10-25, Safari 5.1-6 */
     display: flex;
-    transition: transform 1s ease-in;
+    transition: transform 1s ease-in-out;
     transform: translateX(0);
     img{
         margin-left: 5vw;
@@ -613,8 +684,16 @@ main{
 
 //ABOUT ME CSS
 header{
-    width: 100%;
-}
+    z-index: 1;
+       margin: 0;
+       width: 100%;
+       .bosnianWar{
+           display: none;
+       }
+       h2{
+           font-size: 15px;
+       }
+   }
 main{
     @keyframes slideUp{
         from{
@@ -643,15 +722,20 @@ main{
     display: block;
 }
 .bio{
+    z-index: 0;
     min-height: 251vh;
     flex-direction: column;
     pointer-events: none;
     .bookList{
+        button{
+            font-size: 20px;
+            color: black;
+        }
         width: 100%;
         border-bottom: #13274F 5px solid;
         border-top:#13274F 5px solid;
         .bookDiv{
-          
+            z-index: 0;
             width: 100%;
            
             display: block;
@@ -659,6 +743,7 @@ main{
                 pointer-events: none;
                 width: 100%;
             .bookDescription{
+                z-index: 0;
                 width: 80%;
                 background-color:#F4BB44;
                 border: none;
@@ -717,7 +802,7 @@ main{
 
 
 }
-@media (max-width:425px){
+@media (max-width:445px){
      
     header{
      z-index: 1;
@@ -734,6 +819,10 @@ main{
        
         .bio{
             .bookList{
+                button{
+                    font-size: 20px;
+                    color: black;
+                }
                 .bookDiv{
                     .bookDescription{
                         z-index: auto;
