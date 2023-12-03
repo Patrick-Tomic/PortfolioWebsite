@@ -54,8 +54,8 @@ export default function buildImageSlider(){
     }
     let count = 0
     var interval = setInterval(()=>{
-        let vw = 100
-        if(count ==-11){
+        let vw = 80
+        if(count ==-6){
             count = 0
             vw = vw*count
             slider.style.transform = `translateX(${vw}vw)`
@@ -64,7 +64,7 @@ export default function buildImageSlider(){
             vw = vw*count
             slider.style.transform = `translateX(${vw}vw)`
             }
-    },3000)
+    },5000)
     const wrap = document.createElement('div')
     wrap.classList.add('sliderWrap')
     wrap.appendChild(slider)

@@ -28,8 +28,9 @@ export default function buildSkills(){
                 img.title = 'Java'               
                 img.src = java
                 img.alt = 'Java'
+                img.id = 'java'
                 p.innerHTML = img.title
-                p.style.marginLeft = '10px'
+                p.classList.add('java')
                 card.appendChild(img)
                 card.appendChild(p)
                 skills.appendChild(card)
@@ -48,7 +49,8 @@ export default function buildSkills(){
             case 2:
                 img.title = 'HTML'
                 img.src = html
-                p.style.marginLeft = '11px'
+                p.classList.add('html')
+
                 img.alt = 'HTML'
                 p.innerHTML = img.title
                 card.appendChild(img)
@@ -60,7 +62,8 @@ export default function buildSkills(){
                 img.title = 'CSS'
                 img.src = css
                 img.alt = 'CSS'
-                p.style.marginLeft = '12px'
+               
+                p.classList.add('css')
                 p.innerHTML = img.title
                 card.appendChild(img)
                 card.appendChild(p)
@@ -83,6 +86,7 @@ export default function buildSkills(){
                 img.src = sql
                 img.alt = 'mySQL'
                 p.style.marginLeft = '8px'
+                p.classList.add('sql')
                 p.innerHTML = img.title
                 card.appendChild(img)
                 card.appendChild(p)
@@ -103,6 +107,7 @@ export default function buildSkills(){
             case 7:
                 img.title = 'Webpack'
                 img.src = wp
+                img.classList.add('webpack')
                 img.alt = 'Webpack'
                 p.innerHTML = img.title
                 card.appendChild(img)
