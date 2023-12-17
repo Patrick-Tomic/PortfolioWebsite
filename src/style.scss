@@ -244,7 +244,7 @@ header{
    
 .sideBar{
     width: 25vw;
-  
+    
     height: 100%;
     background-color: 	#36454F;
     position: absolute;
@@ -256,10 +256,10 @@ header{
     align-self: flex-end;
     cursor: pointer;
 }
-.btnDiv{
+div{
     display: flex;
      
-    .btn{
+    button{
         cursor: pointer;
         margin-top: 15px;
         align-self: flex-start;
@@ -268,7 +268,7 @@ header{
         font-size: 20px;
         color: white;
     }
-    .btn:hover{
+    button:hover{
         color:  #FFBF00;
     }
 }
@@ -292,9 +292,30 @@ header{
 }
 
 main{
+ min-height: 100%;
+.blog{
+    color: white;
+    padding: 10vh 10vw;
+  
+    li{
+       cursor: pointer;
+        font-size: 24px;
+        h2{
+            text-decoration: none;
+            font-size: 22px;
+            display: none;
+        }
+        p{
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            display: none;
+        }
+        
+    }
    
- 
-    
+}
+
 .bio{
     z-index: 5;
     height: 700px;

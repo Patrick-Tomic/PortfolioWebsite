@@ -1,5 +1,6 @@
 import buildMain from './buildMain'
 import buildAboutMe from './about'
+import buildBlog from './blog'
 export default function buildSideBar(){
     const side = document.querySelector('.side')
     const btn = document.querySelector('.sideBarBtn')
@@ -48,6 +49,17 @@ p.innerHTML = '<svg width="40" height="40" viewBox="0 0 183 150" fill="none" xml
      aboutBtn.classList.add('btn')
      aboutDiv.appendChild(aboutBtn)
      aboutDiv.appendChild(aboutP)
+     const blogDiv = document.createElement('div')
+     const blogBtn = document.createElement('button')
+     blogBtn.innerHTML = "Blog"
+     blogBtn.addEventListener('click',() =>{
+        main.innerHTML = ''
+        buildBlog()
+        body.style.backgroundColor = '#343434'
+        sideBar.removeAttribute('id','active')
+     })
+     blogDiv.appendChild(blogBtn)
      sideBar.appendChild(aboutDiv)
+     sideBar.appendChild(blogDiv)
     side.appendChild(sideBar)
 }
