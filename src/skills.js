@@ -8,6 +8,9 @@ import sql from './pics/sql.png'
 import wp from './pics/webpack.png'
 import ts from './pics/ts.png'
 import jest from './pics/jest.png'
+import tailwind from './pics/tailwind.png'
+import react from './pics/react.png'
+import vite from './pics/Vitejs-logo.svg'
 export default function buildSkills(){
     const wrap = document.createElement('div')
     const main = document.querySelector('main')
@@ -18,7 +21,7 @@ export default function buildSkills(){
     h2.innerHTML = "My Skillset"
     wrap.appendChild(h2)
     let count = 0
-    while(count < 10){
+    while(count < 13){
         const img = document.createElement('img')
         const p = document.createElement('p')
         const card = document.createElement('div')
@@ -131,6 +134,40 @@ export default function buildSkills(){
                 img.title = 'Jest'
                 img.src = jest
                 img.alt = 'Jest'
+                p.innerHTML = img.title
+                p.style.marginLeft='10px'
+                card.appendChild(img)
+                card.appendChild(p)
+                skills.appendChild(card)
+                count++
+                break
+            case 10:
+                img.title = 'Tailwind'
+                img.src = tailwind
+                img.alt = 'Tailwind'
+                p.innerHTML = img.title
+            img.classList.add('tailwind')
+                card.appendChild(img)
+                card.appendChild(p)
+                skills.appendChild(card)
+                count++
+                break
+            case 11:
+                img.title = 'React'
+                img.src = react
+                p.id = 'react'
+                img.alt = 'React'
+                img.innerHTML = img.title
+                card.appendChild(img)
+                card.appendChild(p)
+                skills.appendChild(card)
+                count++
+                break
+            case 12:
+                img.title = 'Vite'
+                p.id = 'vite'
+                img.src = vite
+                img.alt = 'Vite'
                 p.innerHTML = img.title
                 card.appendChild(img)
                 card.appendChild(p)
