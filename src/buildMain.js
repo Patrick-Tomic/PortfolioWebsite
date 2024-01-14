@@ -1,11 +1,14 @@
 import buildHeader from './header'
 import weather from './pics/weatherImg.png'
+import battleShip from './pics/Battleship.png'
+import FF from './pics/FF.png'
 import buildSkills from './skills'
 import buildProject from './project'
 export default function buildMain(){
 buildHeader()
 buildSkills()
- 
+buildProject(FF, 'https://fighter-foundation2-0.vercel.app/', 'https://github.com/Patrick-Tomic/FighterFoundation2.0', 'So this is my first Volunteering project for a nonprofit in my area, The Fighter Foundation. I absolutely love the mission presented within this organization and I hope to help and make a difference in the growth. <br> for this project I am using React, Tailwind CSS, TypeScript, and Vite. Hosting on Vercel.','Fighter Foundation Rebuild')
+buildProject(battleShip,'https://patrick-tomic.github.io/BattleShip/','https://github.com/Patrick-Tomic/BattleShip','From this project I implemented my first TDD in building, I did large amounts of code review and learned that smaller quantities of code can definetly be as strong as hundreds of lines','BattleShip') 
 buildProject(weather,'https://patrick-tomic.github.io/WeatherAPI/','https://github.com/Patrick-Tomic/WeatherAPI','This application is my first time utilizing a API, I do some simple animations within this project and learned alot through the use of responsive design and animation','Weather Application')
  const formDiv = document.createElement('div')
  formDiv.classList.add('formDiv')

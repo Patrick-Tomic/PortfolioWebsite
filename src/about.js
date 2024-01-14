@@ -48,12 +48,19 @@ export default function buildAboutMe(){
                 const currentRead = document.createElement('h2')
                 currentRead.innerHTML = 'Currently Reading'
                     const currentBooks = document.createElement('ul')
-                    const girlDragon = document.createElement('li')
-                    girlDragon.innerHTML = "Girl With the Dragon Tattoo"
-                    currentBooks.appendChild(girlDragon)
-                    const atomicHabits = document.createElement('li')
-                    atomicHabits.innerHTML = 'Atomic Habits'
-                    currentBooks.appendChild(atomicHabits)
+                    const bible = document.createElement('li')
+                    bible.innerHTML = "The Bible"
+                    currentBooks.appendChild(bible)
+                    const deepWork = document.createElement('li')
+                    deepWork.innerHTML = 'Deep Work'
+                    currentBooks.appendChild(deepWork)
+                    const LOTR = document.createElement('li')
+                    LOTR.innerHTML = 'Lord of The Ring'
+                    bookContainer.appendChild(LOTR)
+                    const meditations = document.createElement('li')
+                    meditations.innerHTML = 'Meditations of Marcus Aurelius'
+                    currentBooks.appendChild(LOTR)
+                    currentBooks.appendChild(meditations)
                     bookContainer.appendChild(currentRead)
                     bookContainer.appendChild(currentBooks)
                     bookList.appendChild(bookContainer)

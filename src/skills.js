@@ -7,6 +7,7 @@ import py from './pics/python.png'
 import sql from './pics/sql.png'
 import wp from './pics/webpack.png'
 import ts from './pics/ts.png'
+import jest from './pics/jest.png'
 export default function buildSkills(){
     const wrap = document.createElement('div')
     const main = document.querySelector('main')
@@ -17,7 +18,7 @@ export default function buildSkills(){
     h2.innerHTML = "My Skillset"
     wrap.appendChild(h2)
     let count = 0
-    while(count < 9){
+    while(count < 10){
         const img = document.createElement('img')
         const p = document.createElement('p')
         const card = document.createElement('div')
@@ -120,6 +121,16 @@ export default function buildSkills(){
                 img.src = ts
                 img.style.marginLeft = '20px'
                 img.alt = 'Typescript'
+                p.innerHTML = img.title
+                card.appendChild(img)
+                card.appendChild(p)
+                skills.appendChild(card)
+                count++
+                break
+            case 9:
+                img.title = 'Jest'
+                img.src = jest
+                img.alt = 'Jest'
                 p.innerHTML = img.title
                 card.appendChild(img)
                 card.appendChild(p)
